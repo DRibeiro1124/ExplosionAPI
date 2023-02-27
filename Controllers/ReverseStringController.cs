@@ -9,7 +9,20 @@ namespace ExplosionAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ReverseStringController : ControllerBase
+    public class reverseString
     {
+        [HttpGet("word")]
+        public string Reverse(string word)
+        {
+            string reverse = "";
+            char[] strInChar = word.ToCharArray();
+
+            for (int i = strInChar.Length - 1; i >= 0; i--)
+            {
+                reverse += strInChar[i];
+            }
+            return reverse;
+        }
     }
+
 }
