@@ -11,5 +11,12 @@ namespace ExplosionAPI.Controllers
     [ApiController]
     public class MumblingController : ControllerBase
     {
+        [HttpGet("mumbles")]
+
+        public string Accumulator(string s)
+        {
+            return string.Join("-", s.Select((x, i) => char.ToUpper(x) + new string(char.ToLower(x), i)));
+        }
     }
 }
+
