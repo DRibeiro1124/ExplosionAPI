@@ -9,7 +9,7 @@ namespace ExplosionAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class reverseString
+    public class ReverseController : ControllerBase
     {
         [HttpGet("word")]
         public string Reverse(string word)

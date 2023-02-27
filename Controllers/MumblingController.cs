@@ -9,13 +9,7 @@ namespace ExplosionAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ExplosionController : ControllerBase
+    public class MumblingController : ControllerBase
     {
-        [HttpGet("digits")]
-
-        public string Explode(string e)
-        {
-            return string.Join("", e.Select(answer => new String(answer, int.Parse(answer.ToString()))));
-        }
     }
 }
